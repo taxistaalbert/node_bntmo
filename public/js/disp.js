@@ -25,7 +25,7 @@ function detectar_dispositivo(){
     return dispositivo;
 }
 
-let soloMovil = false;
+let soloMovil = true;
 
 if(soloMovil){
     if(detectar_dispositivo() === 'PC'){
