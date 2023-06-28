@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input-group-select {
+            position: relative;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .input-group-select select {
+            padding: 10px;
+            margin-left: 5px;
+            font-size: 1.12em;
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid;
+            transition: border-color 0.2s ease;
+            /* background-image: url("../img/info.jpg"); */
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 20px 20px;
+        }
+
+        .input-group-select select:focus {
+            border: 0;
+            border-bottom: 3px solid;
+            border-color: #fdda24;
+            outline: none;
+        }
+
+        .input-group-select label {
+            position: absolute;
+            font-size: 1.12em;
+            top: 10px;
+            left: 10px;
+            transition: 0.3s;
+            pointer-events: none;
+            color: #292929;
+            transform-origin: top left;
+        }
+
+        .input-group-select select:valid + label{
+            top: -15px;
+            font-size: 14px;
+            color: #292929;
+        }
+    </style>
+</head>
+
+<body style="padding-top: 100px;">
+    <div class="input-group-select">
+        <select id="mySelect" required>
+          <option value="" disabled selected></option>
+          <option value="option1">Opción 1</option>
+          <option value="option2">Opción 2</option>
+          <option value="option3">Opción 3</option>
+        </select>
+        <label for="mySelect">Seleccione</label>
+      </div>
+      
+      
+      
+</body>
+
+</html>

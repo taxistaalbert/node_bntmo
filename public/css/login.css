@@ -1,0 +1,714 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #f7f7f4;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.38;
+    color: #454648;
+}
+
+*{
+    font-family: 'OpenSans-Regular';
+}
+
+img{
+    width: 100%;
+}
+
+input{
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+.input-group-select input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/**
+* * UTILS
+*/
+.mt-5{
+    margin-top: 20px;
+}
+
+.mr-2{
+    margin-right: 10px;
+}
+
+.fs-16{
+    font-size: 20px;
+}
+
+.d-none{
+    display: none !important;
+}
+
+/**
+* * HEADER
+*/
+.header{
+    background-color:white;
+}
+
+.navegacion{
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 16px #1515151a;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 0 16px 0 57px;
+}
+
+.logo{
+    height: 22px;
+}
+
+
+
+.idioma{
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.idioma a{
+    font-size: 14px;
+    font-size: 'OpenSans,normal';
+    text-decoration: none;
+    color: #343434;
+}
+
+.icono-lenguaje{
+    width: 24px;
+    height: 24px;
+    content: url('https://personas.banistmo.com/assets/icons/language.svg');
+}
+
+/**
+* MAIN
+*/
+
+.container{
+    padding-top: 30px;
+    width: 73%;
+    background-color: transparent;
+    font-size: 'OpenSans-Regular';
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+
+/**
+* CAMPOS 
+*/
+
+.container-campos{
+    background-color: #fff;
+    box-shadow: 0 3px 12px #0000001a;
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+
+    box-shadow: 0 3px 12px #0000001a;
+}
+
+.container-campos p{
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.header-campos{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #e6e7e8;
+}
+
+.input-row-campos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
+
+    padding-block: 5px;
+    padding-inline: 20px;
+}
+
+.input-bg-email{
+    background-image: url("../img/ban-mail.svg");
+    background-image: 30px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 28px;
+}
+
+.input-bg-lock{
+    background-image: url("../img/ban-lock.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 26px;
+}
+
+.input-bg-card{
+    background-image: url("../img/ban-card.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 26px;
+}
+
+.input-bg-phone{
+    background-image: url("../img/ban-phone.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 26px;
+}
+
+.input-fix label{
+    font-size: 1em !important;
+}
+
+/**
+* END CAMPOS 
+*/
+
+
+
+.container-grid{
+    width: 32%;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 20px;  
+    position: relative;
+
+}
+
+.grid{
+    background-color: #fff;
+    box-shadow: 0 3px 12px #0000001a;
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+.sub-grid{
+    background-color: #fff;
+    box-shadow: 0 3px 12px #0000001a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.nav-tabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #e6e7e8;
+    cursor:pointer;
+}
+
+
+.tab-selector{
+    width: 50%;
+    padding: 60px;
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+
+.active{
+    border-bottom: solid #fdda24;
+}
+
+
+
+.tab-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* TAB REGISTRO */
+.content-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    padding-inline: 20px;
+    text-align: center;
+}
+
+.icon-registro{
+    margin-top: 30px;
+}
+
+.icon-registro img{
+    width: 40px;
+}
+
+
+/* -------------------- */
+
+.seccion{
+    display: none;
+}
+
+.mostrar-seccion{
+    display: block
+}
+
+.titulo-ingresar{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.35;
+
+}
+
+.titulo-registro{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+
+.img-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+/**
+* INPUT GROUPS
+*/
+.input-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
+
+    padding: 20px;
+}
+
+.input-group-text {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+.input-group-text input {
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 1.12em;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid;
+    transition: border-color 0.2s ease;
+}
+
+.input-bg-info{
+    background-image: url("../img/info.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+}
+
+.input-group-text input:focus{
+    border: 0;
+    border-bottom: 3px solid;
+    border-color: #fdda24;
+    outline: none;
+}
+
+.input-group-text label {
+    position: absolute;
+    font-size: 1.12em;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #292929;
+}
+
+.input-group-text input:focus + label,
+.input-group-text input:not(:placeholder-shown) + label {
+    top: -15px;
+    font-size: 14px !important;
+    color: #292929;
+}
+
+/**
+* INPUTS SELECT
+*/
+.input-group-select {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.input-group-select select {
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 1.12em;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid;
+    transition: border-color 0.2s ease;
+    /* background-image: url("../img/info.jpg"); */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+}
+
+.input-group-select select:focus {
+    border: 0;
+    border-bottom: 3px solid;
+    border-color: #fdda24;
+    outline: none;
+}
+
+.input-group-select label {
+    position: absolute;
+    font-size: 1.12em;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #292929;
+    transform-origin: top left;
+}
+
+.input-group-select select:valid + label{
+    top: -15px;
+    font-size: 14px;
+    color: #292929;
+}
+
+
+.i-icon{
+    padding-bottom: 20px;
+    margin-right: 4px;
+}
+
+.i-icon img{
+    width: 30px;
+}
+
+/* END INPUTS */
+
+
+
+
+
+.over-grid{
+    background-color: white;
+    box-shadow: 0 3px 12px #0000001a;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+}
+.over-grid> p{
+    
+    font-size: 1rem;
+}
+
+
+.column-right{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+   CONOCE Styles 
+
+*/
+
+
+
+.conoce{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conoce img{
+    width: 34px;
+}
+.conoceItems{
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+}
+.conoceItem{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.conoceItem > a{
+    position: absolute;
+    text-decoration: none;
+    font-weight: bold;
+    left: 50px;
+}
+.conoceItem > a:hover{
+    text-decoration: none;
+    color: #fdda24;
+}
+
+
+.titleConoce{
+    text-align: center;
+    font-size: 1.2rem;
+
+    margin-bottom: 20px;
+}
+
+
+
+
+/**
+* BUTTONS
+*/
+.btnConoce{
+    padding: 18px;
+    background-color: transparent;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+.btn{
+    min-width: 130px;
+    padding-inline: 30px;
+    height: 38px;
+    border-radius: 19px;
+    font-family: "OpenSans-Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -.2px;
+    border: 0;
+    text-transform: uppercase;
+    background-color: #ddd;
+    box-shadow: 0 1px 4px #0000001a;
+}
+
+.btn-success{
+    background-color: #fdda24;
+
+}
+
+.btn-row{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/**
+* LINKS
+*/
+a{
+    font-size: 0.8rem;
+    color:#474747
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+.options-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+/**
+* ICONS
+*/
+.icon-circle{
+    border-radius: 50%;
+    background-color: #fdda24;
+    width: 48px;
+    height: 48px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-circle img{
+    width: 24px;
+}
+
+
+/*Footer*/
+.footer{
+    margin-top: 50px;
+
+    font-size: 'OpenSans-Regular';
+}
+
+.contenedor-footer{
+    padding: unset;
+    width: 100%;
+    background-color: transparent;
+    border-top: 1px #e6e7e8 outset;
+    height: 115px;
+    text-align: center;
+    padding: 22px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-telefono{
+    font-size: .79em;
+    padding: 2px;
+}
+
+.info{
+    font-size: .75em;
+    
+}
+
+
+
+/***
+* MEDIA QUERIES
+*/
+/*Tablet*/
+@media (max-width: 1200px){
+
+    .container{
+        flex-wrap: wrap;
+    }
+    .container-grid{
+        width: 70%;
+    }
+    .column-right{
+        width: 80%;
+        padding: 20px 0;
+    }
+    .btnConoce{
+        margin-top: 15px;
+    }
+    .grid{
+        height: 500px;
+    }
+
+    .over-grid{
+        background-color: #fff;
+        box-shadow: 0 3px 12px #0000001a;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .options-row{
+        margin-bottom: 30px;
+    }
+    .footer{
+    margin-top: 150px;
+
+    }
+}
+
+
+
+@media (max-width: 700px){
+    .container{
+        width: 100%;
+    }
+    .container-grid{
+        width: 95%;
+        
+    }
+    .column-right{
+        display: none;
+        width: 95%;
+    }
+}
